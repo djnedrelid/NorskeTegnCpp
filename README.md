@@ -12,4 +12,10 @@ er allerede i ASCII settet.
 
 Jeg har visst om u8"" notasjonen en stund, men en vane er av og til vond å vende. 
 Det gjør forsåvidt ingenting så lenge man har henholdsvis kontroll i forhold til 
-samhandling mellom egen og andres kode.
+samhandling mellom egen og andres kode. Det er likevel ikke å stikke under et teppe 
+at det er mer tungvindt enn å bare bruke std::string og u8 med c++11 og senere versjoner.
+
+Husk også lagring av selve filer i 65001 som inneholder UTF-8 tegn. 
+
+BOM (Byte Order Mark) er ikke alltid nødvendig, men det finner man ofte fort ut og har 
+kun med tolkeren å gjøre som ofte er smart nok til å oppdage innhold som UTF-8 på egenhånd.
